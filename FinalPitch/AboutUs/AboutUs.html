@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/banner.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+	<link rel="stylesheet" href="css/GalMenu.css" />
+	<link rel="stylesheet" type="text/css" href="css/fresco/fresco.css"/>
+	<title>Aussie History</title>
+
+</head>
+<body id="body">
+	<div id="loading"></div></br></br>
+	
+	
+	<main class = "hide">
+		
+		<div class="banner" id="banner1" style="margin:0 auto; box-shadow: rgba(0,0,0,0.5) 0 5px 10px;">
+				<div class="banner-view"></div>
+				<div class="banner-btn"></div>
+				<div class="banner-number"></div>
+				<div class="banner-progres"></div>
+		</div>
+		
+	</main>
+	<div class="GalMenu GalDropDown">
+				<div class="circle" id="gal">
+					<div class="ring">
+						<a href="../Timeline/timeline.html" title="" class="menuItem"></a>
+						<a href="../Game/index.php" title="" class="menuItem"></a>
+						<a href="../MapTest/index.php" title="" class="menuItem"></a>
+						<a href="../index.html" title="" class="menuItem"></a>
+						<a href="img2/1.PNG" title="" class="menuItem fresco" data-fresco-group="resource"data-fresco-group-options="ui: 'inside'"></a>
+						<a href="../Video/Video.html" title="" class="menuItem"></a></div>
+						<audio id="audio" src="../audio/niconiconi.mp3"></audio>
+				</div>
+	</div>
+	<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+	<a href="img2/2.PNG" title="" class="fresco" data-fresco-group="resource" ></a>
+	<a href="img2/3.PNG" title="" class="fresco" data-fresco-group="resource" ></a>
+	<a href="img2/4.PNG" title="" class="fresco" data-fresco-group="resource" ></a>
+	<a href="img2/5.PNG" title="" class="fresco" data-fresco-group="resource" ></a>
+	<a href="img2/6.png" title="" class="fresco" data-fresco-group="resource" ></a>
+	
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>	
+<script type="text/javascript" src="js/banner.js"></script>
+<script type="text/javascript" src="js/fresco/fresco.js"></script>
+<script type="text/javascript" src="js/GalMenu.js"></script>
+<script type="text/javascript" src="js/jsized.snow.min.js"></script> 
+<script type="text/javascript">
+	//show image. The FragmentBanner is from the plugin banne.js
+	var banner = new FragmentBanner({
+		container : "#banner1",
+		imgs : ['images/5.jpg','images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg'],
+		size : {
+			width : 1100,
+			height : 600
+		},
+		
+		grid : {
+			line : 12,
+			list : 14
+		},
+		index: 0,
+		type : 2,
+		boxTime : 5000,
+		fnTime : 25000
+	});
+	//loading page
+	setTimeout(function() {
+					$("body").addClass("loaded");
+					$("main").removeClass("hide");
+					}, 2000);
+	//menu
+	var items = document.querySelectorAll('.menuItem');
+			for (var i = 0,l = items.length; i < l; i++) {
+					items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+					items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+					}
+					
+		$(document).ready(function() {
+			$('body').GalMenu({
+			'menu': 'GalDropDown'
+			})
+		});
+		//This is using a Plugin.(jsized.snow.min.js)
+		createSnow('images/', 50);
+
+</script>
+</body>
+</html>

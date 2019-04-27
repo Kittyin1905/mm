@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+			}
+
+body {
+		/* margin: 2em; */
+		background-image: url("images/map.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size:cover;
+	
+			}
+
+#map {
+		/*width: 90vw;*/
+		/*height: 90vh;*/
+		width: 55vw;
+		height: 80vh;
+		margin: 0 auto;
+		box-shadow: rgba(0,0,0,0.5) 0 5px 10px;
+		/* overflow:left; */
+		/* float:left; */
+		/* https://css-tricks.com/fun-viewport-units */
+			}
+
+#marker-details {
+		text-align: center;
+		margin-top: 2em;
+			}
+
+#loading {
+	position: fixed;
+	background: white url(images/test.gif) no-repeat center center;
+	height: 100%;
+	width: 100%;
+	top :0;
+	left:0;
+
+}
+body.loaded #loading{
+	opacity:0;
+	visibility: hidden;
+}
+
+.hide{
+	opacity:0;
+	visibility: hidden;
+}
+
+h2{
+	font-family:fantasy;
+}
+			
+		

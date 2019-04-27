@@ -1,0 +1,20 @@
+.record {
+	border: 2px solid orange;
+	padding: 1em;
+	margin-top: 1em;
+	background-color:red;
+}
+
+/* #loading { */
+	/* position: fixed; */
+	/* background: white url(../images/test.gif) no-repeat center center; */
+	/* height: 100%; */
+	/* width: 100%; */
+	/* top :0; */
+	/* left:0; */
+
+/* } */
+/* body.loaded #loading{ */
+	/* opacity:0; */
+	/* visibility: hidden; */
+/* } */
